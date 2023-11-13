@@ -1,5 +1,5 @@
 export enum Departement{
-   IT="IT",
+   TI="TI",
    Finance="Finance"
 }
 

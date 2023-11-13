@@ -8,6 +8,15 @@
         "departement": "TI"
       },
       "id": 1
+    },
+    {
+      "id": 35,
+      "matricule": "M580",
+      "nom": "ilyes",
+      "affiliation": {
+        "fonction": "Ingénieur",
+        "departement": "Finance"
+      }
     }
   ]
 }

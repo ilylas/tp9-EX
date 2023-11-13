@@ -1,27 +1,28 @@
 <div class="container">
     <h2> Ajout d'un employé</h2>
-    <form>
+    <form [formGroup]="employesForm">
         <div>
             <label> Donnez le matricule</label>
-            <input type="text">
+            <input type="text" formControlName="matricule">
         </div>
 
         <div>
             <label> Donnez le nom</label>
-            <input type="text">
+            <input type="text" formControlName="nom">
         </div>
 
-        <div class="p-2 bg-light rounded">
+        <div class="p-2 bg-light rounded" formGroupName="affiliation" >
             <strong>Affiliation</strong>
             <div>
                 <div>
                     <label> Choisissez le département</label>
-                    <input type="radio" value="TI"> IT
-                    <input type="radio" value="Finance"> Finance
+                    <input type="radio" value="TI" formControlName="departement"> IT
+                    <input type="radio" value="Finance" formControlName="departement"> Finance
                 </div>
                 <div>
                     <label> Donnez la fonction</label>
-                    <select>
+                    <select formControlName="fonction">
+                        <option *ngFor="let f of lesfonctions" [value]="f">{{f}}</option>
                     </select>
                 </div>
             </div>
@@ -30,8 +31,8 @@
 
         <input type="button" value="Ajouter Diplôme">
         <br>
-        <button class="btn btn-primary">Ajouter Employé</button>
-        <input type="button" value="Vider">
+        <button class="btn btn-primary" (click)="ajouter()">Ajouter Employé</button>
+        <input type="button" value="Vider" (click)="oneffacer()">
     </form>
 </div>
 <app-listemployes></app-listemployes>

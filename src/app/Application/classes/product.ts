@@ -7,7 +7,8 @@ export class Product {
         public prix:number,
         public madeIn:string,
         public categorie:Category ,
-        public nouveau:boolean
+        public nouveau:boolean,
+        public pointsVente:string[]
     ){}
 
 }

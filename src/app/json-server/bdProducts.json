@@ -19,6 +19,75 @@
         "Sfax",
         "Nabeul"
       ]
+    },
+    {
+      "id": 45,
+      "libelle": "sdfsf",
+      "prix": 500,
+      "madeIn": "Tunisie",
+      "categorie": "Accessoires",
+      "nouveau": true
+    },
+    {
+      "id": 46,
+      "libelle": "sdfsf",
+      "prix": 60,
+      "madeIn": "Tunisie",
+      "categorie": "Accessoires",
+      "nouveau": true
+    },
+    {
+      "id": 4566,
+      "libelle": "dfsdg",
+      "prix": 455,
+      "madeIn": "Tunisie",
+      "categorie": "Accessoires",
+      "nouveau": true
+    },
+    {
+      "id": 4567,
+      "libelle": "",
+      "prix": 0,
+      "madeIn": "Tunisie",
+      "categorie": "Accessoires",
+      "nouveau": true,
+      "pointsVente": []
+    },
+    {
+      "id": 4568,
+      "libelle": "",
+      "prix": 0,
+      "madeIn": "Tunisie",
+      "categorie": "Accessoires",
+      "nouveau": true,
+      "pointsVente": []
+    },
+    {
+      "id": 4569,
+      "libelle": "",
+      "prix": 0,
+      "madeIn": "Tunisie",
+      "categorie": "Accessoires",
+      "nouveau": true,
+      "pointsVente": [
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 101,
+      "libelle": "yguhi",
+      "prix": 0,
+      "madeIn": "Tunisie",
+      "categorie": "Accessoires",
+      "nouveau": true,
+      "pointsVente": [
+        "ttt",
+        "hh",
+        "",
+        ""
+      ]
     }
   ]
 }
