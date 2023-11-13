@@ -28,11 +28,24 @@
             </div>
         </div>
 
+        <div class="p-2 bg-light rounded" >
+            <strong>Liste des diplomes</strong>
+            <div>
+                <label>Intitule du diplôme</label>
+                <input type="text" >
+            </div>
+            <div>
+                <label>Annee du diplôme</label>
+                <input type="number" >
+            </div>
+        <input type="button" class="btn btn-warning" value="Supprimer">
+        </div>
 
-        <input type="button" value="Ajouter Diplôme">
+
         <br>
-        <button class="btn btn-primary" (click)="ajouter()">Ajouter Employé</button>
-        <input type="button" value="Vider" (click)="oneffacer()">
+        <input type="button" class="btn btn-dark" (click)="ajouterdiplome()" value="Ajouter Diplôme">
+        <button class="btn btn-primary" (click)="ajouterempolye()">Ajouter Employé</button>
+        <input type="button" value="Vider" class="btn btn-secondary" (click)="onvider()">
     </form>
 </div>
 <app-listemployes></app-listemployes>

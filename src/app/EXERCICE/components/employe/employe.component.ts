@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, ViewChild} from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Category } from 'src/app/Application/enum/category';
 import { ProductService } from 'src/app/Application/services/product.service';
@@ -6,6 +6,8 @@ import { EmployeService } from '../../services/employe.service';
 import { Affiliation } from '../../classes/affiliation';
 import { Departement, Fonction } from '../../enum/types';
 import { Employe } from '../../classes/employe';
+import { Diplome } from '../../diplome';
+import { ListemployesComponent } from '../listemployes/listemployes.component';
 
 @Component({
   selector: 'app-employe',
@@ -28,6 +30,10 @@ export class EmployeComponent implements OnInit{
         fonction:[Fonction.Tec],
         departement:[Departement.TI]
       }),
+      diplome:this.fb.group({
+        intitule:[''],
+        annee:[0]
+      })
 
       // erreur
       // affiliation:new Affiliation({
@@ -59,14 +65,22 @@ export class EmployeComponent implements OnInit{
   // })
   lesEmpoyes!:Employe[]
 
-
-  ajouter(){
+  @ViewChild(ListemployesComponent) childComponent!: ListemployesComponent;
+  ajouterempolye(){
     this.employeService.addEmploye(this.employesForm.value as Employe).subscribe(
       ()=>{}
     )
   }
   // ,departement:Departement.TI,fonction:Fonction.Sec
   oneffacer(){
-    this.employesForm.reset({matricule:'',nom:'',affiliation:{departement:Departement.TI,fonction:Fonction.Sec}})
+    this.employesForm.reset({matricule:'',nom:'',affiliation:{departement:Departement.TI,fonction:Fonction.Sec},diplome:[]})
+  }
+
+  ajouterdiplome(){
+    this.employeService.adddiplome(this.employesForm.value as Diplome).subscribe()
+  }
+
+  onvider(){
+    this.employeService.deletediplome(this.employesForm.value as Diplome).subscribe()
   }
 }
