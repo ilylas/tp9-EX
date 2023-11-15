@@ -73,7 +73,7 @@ export class EmployeComponent implements OnInit{
   }
   // ,departement:Departement.TI,fonction:Fonction.Sec
   oneffacer(){
-    this.employesForm.reset({matricule:'',nom:'',affiliation:{departement:Departement.TI,fonction:Fonction.Sec},diplome:[]})
+    this.employesForm.reset({matricule:'',nom:'',affiliation:{departement:Departement.TI,fonction:Fonction.Sec},diplome:{}})
   }
 
   ajouterdiplome(){
